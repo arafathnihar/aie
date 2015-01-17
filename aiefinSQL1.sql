@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2015 at 03:03 AM
+-- Generation Time: Jan 18, 2015 at 03:26 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -19,6 +19,102 @@ SET time_zone = "+00:00";
 --
 -- Database: `aiefin`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `committee`
+--
+
+CREATE TABLE IF NOT EXISTS `committee` (
+  `Name` varchar(100) NOT NULL,
+  `Location` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event`
+--
+
+CREATE TABLE IF NOT EXISTS `event` (
+  `EventID` varchar(20) NOT NULL,
+  `BudgetedExpense` float NOT NULL DEFAULT '0',
+  `ActualExpense` float NOT NULL DEFAULT '0',
+  `ActualIncome` float NOT NULL DEFAULT '0',
+  `UserID` varchar(20) NOT NULL,
+  `Duration` int(11) NOT NULL,
+  `StartDate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `exchangeperson`
+--
+
+CREATE TABLE IF NOT EXISTS `exchangeperson` (
+  `EPID` varchar(20) NOT NULL,
+  `Name` text NOT NULL,
+  `Country` text NOT NULL,
+  `StartDate` date NOT NULL,
+  `EndDate` date NOT NULL,
+  `EP_Fee` float NOT NULL DEFAULT '0',
+  `Proj_ID` varchar(20) NOT NULL,
+  `UserID` varchar(20) NOT NULL,
+  `Status` text NOT NULL,
+  `Function` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `expense`
+--
+
+CREATE TABLE IF NOT EXISTS `expense` (
+  `Exp_ID` varchar(20) NOT NULL,
+  `Date` date NOT NULL,
+  `UserID` varchar(20) NOT NULL,
+  `Function` text NOT NULL,
+  `Status` text NOT NULL,
+  `Description` text NOT NULL,
+  `Amount` float NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `income`
+--
+
+CREATE TABLE IF NOT EXISTS `income` (
+  `Inc_ID` varchar(20) NOT NULL,
+  `Date` date NOT NULL,
+  `UserID` varchar(20) NOT NULL,
+  `Function` text NOT NULL,
+  `Status` text NOT NULL,
+  `Description` text NOT NULL,
+  `Amount` float NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `project`
+--
+
+CREATE TABLE IF NOT EXISTS `project` (
+  `Proj_ID` varchar(20) NOT NULL,
+  `Name` text NOT NULL,
+  `Organization` text NOT NULL,
+  `UserID` varchar(20) NOT NULL,
+  `Function` text NOT NULL,
+  `BudgetedExpense` float NOT NULL DEFAULT '0',
+  `Proj_Fee` float NOT NULL DEFAULT '0',
+  `Latest_endDate` date NOT NULL,
+  `Earliest_startDate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -300,6 +396,42 @@ INSERT INTO `uc_user_permission_matches` (`id`, `user_id`, `permission_id`) VALU
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `committee`
+--
+ALTER TABLE `committee`
+ ADD PRIMARY KEY (`Name`);
+
+--
+-- Indexes for table `event`
+--
+ALTER TABLE `event`
+ ADD PRIMARY KEY (`EventID`);
+
+--
+-- Indexes for table `exchangeperson`
+--
+ALTER TABLE `exchangeperson`
+ ADD PRIMARY KEY (`EPID`);
+
+--
+-- Indexes for table `expense`
+--
+ALTER TABLE `expense`
+ ADD PRIMARY KEY (`Exp_ID`);
+
+--
+-- Indexes for table `income`
+--
+ALTER TABLE `income`
+ ADD PRIMARY KEY (`Inc_ID`);
+
+--
+-- Indexes for table `project`
+--
+ALTER TABLE `project`
+ ADD PRIMARY KEY (`Proj_ID`);
 
 --
 -- Indexes for table `uc_configuration`
