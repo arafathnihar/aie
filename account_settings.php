@@ -14,7 +14,7 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>UserFrosting Admin - Settings</title>
+    <title>AIEFIN Admin - Settings</title>
 
 	<link rel="icon" type="image/x-icon" href="css/favicon.ico" />
 	

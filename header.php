@@ -15,7 +15,7 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
   </button>
-  <a class="navbar-brand" href="account.php">UserFrosting Admin</a>
+  <a class="navbar-brand" href="account.php">AIEFIN Admin</a>
 </div>
 <div class="collapse navbar-collapse navbar-ex1-collapse">
 <!-- Collect the nav links, forms, and other content for toggling -->

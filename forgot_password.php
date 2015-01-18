@@ -16,7 +16,7 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
     <meta name="author" content="">
     <link rel="shortcut icon" href="css/favicon.ico">
 
-    <title>UserFrosting - Reset Password</title>
+    <title>AIEFIN - Reset Password</title>
 
 	<link rel="icon" type="image/x-icon" href="css/favicon.ico" />
 	
@@ -43,7 +43,7 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
       <div class="header">
         <ul class="nav nav-pills navbar pull-right">
         </ul>
-        <h3 class="text-muted">UserFrosting</h3>
+        <h3 class="text-muted">AIEFIN</h3>
       </div>
       <div class="jumbotron">
         <h1>Reset Password</h1>

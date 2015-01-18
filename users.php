@@ -12,7 +12,7 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>UserFrosting Admin - Users</title>
+    <title>AIEFIN Admin - Users</title>
 
     <link rel="icon" type="image/x-icon" href="css/favicon.ico" />
         

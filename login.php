@@ -22,7 +22,7 @@ if(isUserLoggedIn()) {
     <meta name="author" content="">
     <link rel="shortcut icon" href="css/favicon.ico">
 
-    <title>Welcome to UserFrosting!</title>
+    <title>Welcome to AIEFIN!</title>
 
 	<link rel="icon" type="image/x-icon" href="css/favicon.ico" />
 	
@@ -49,10 +49,10 @@ if(isUserLoggedIn()) {
       <div class="header">
         <ul class="nav nav-pills navbar pull-right">
         </ul>
-        <h3 class="text-muted">UserFrosting</h3>
+        <h3 class="text-muted">AIEFIN</h3>
       </div>
       <div class="jumbotron">
-        <h1>Welcome to UserFrosting!</h1>
+        <h1>Welcome to AIEFIN!</h1>
         <p class="lead">A secure, modern user management system based on UserCake, jQuery, and Bootstrap.</p>
 		<small>Please sign in here:</small>
 		<form class='form-horizontal' role='form' name='login' action='process_login.php' method='post'>

@@ -30,7 +30,7 @@ if(isUserLoggedIn()) {
     <meta name="author" content="">
     <link rel="shortcut icon" href="css/favicon.ico">
 
-    <title>UserFrosting - Register</title>
+    <title>AIEFIN - Register</title>
 
 	<link rel="icon" type="image/x-icon" href="css/favicon.ico" />
 	
@@ -57,7 +57,7 @@ if(isUserLoggedIn()) {
       <div class="header">
         <ul class="nav nav-pills navbar pull-right">
         </ul>
-        <h3 class="text-muted">UserFrosting</h3>
+        <h3 class="text-muted">AIEFIN</h3>
       </div>
       <div class="jumbotron">
         <h1>Let's get started!</h1>

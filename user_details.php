@@ -22,7 +22,7 @@ if (!is_numeric($selected_user_id)){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>UserFrosting Admin - User Details</title>
+    <title>AIEFIN Admin - User Details</title>
 
 	<link rel="icon" type="image/x-icon" href="css/favicon.ico" />
 	
