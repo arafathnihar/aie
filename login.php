@@ -12,6 +12,14 @@ if(isUserLoggedIn()) {
 
 ?>
 
+<!--PHP CODE ENDS HERE-->
+
+
+
+<!--HTML CODE Starts Here-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,20 +30,20 @@ if(isUserLoggedIn()) {
     <meta name="author" content="">
     <link rel="shortcut icon" href="css/favicon.ico">
 
-    <title>Welcome to AIEFIN!</title>
+    <title>Log In</title>
 
 	<link rel="icon" type="image/x-icon" href="css/favicon.ico" />
 	
-    <!-- Bootstrap core CSS -->
+    
     <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+   
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap-switch.min.css" type="text/css" />
 	 
-    <!-- JavaScript -->
+    
     <script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/userfrosting.js"></script>
@@ -52,9 +60,9 @@ if(isUserLoggedIn()) {
         <h3 class="text-muted">AIEFIN</h3>
       </div>
       <div class="jumbotron">
-        <h1>Welcome to AIEFIN!</h1>
-        <p class="lead">A secure, modern user management system based on UserCake, jQuery, and Bootstrap.</p>
-		<small>Please sign in here:</small>
+        <h1>Please Log In</h1>
+        <p class="lead">Please enter your user name and password</p>
+		
 		<form class='form-horizontal' role='form' name='login' action='process_login.php' method='post'>
 		  <div class="row">
 			<div id='display-alerts' class="col-lg-12">
@@ -81,10 +89,16 @@ if(isUserLoggedIn()) {
 		</form>
       </div>	
       <div class="footer">
-        <p>&copy; Your Website, 2014</p>
+        <p align="center">&copy; University of Colombo, School of Computing, 2014-2015</p>
       </div>
 
     </div> <!-- /container -->
+
+
+
+
+
+    <!--JAVASCRIPT CODE-->
 
 	<script>
         $(document).ready(function() {          
@@ -127,5 +141,13 @@ if(isUserLoggedIn()) {
 		  
 		});
 	</script>
+
+	<!--JAVASCRIPT ENDS HERE-->
+
+
   </body>
 </html>
+
+
+<!--HTML ENDS HERE-->
+

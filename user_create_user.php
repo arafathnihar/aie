@@ -6,7 +6,7 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
 
 // If registration is disabled, send them back to the home page with an error message
 if ($can_register != "true"){
-	addAlert("danger", "I'm sorry, registration has been disabled.");
+	addAlert("danger", "Registration has been disabled.");
 	header("Location: login.php");
 	exit();
 }
@@ -14,7 +14,7 @@ if ($can_register != "true"){
 
 //Prevent the user visiting the logged in page if he/she is already logged in
 if(isUserLoggedIn()) {
-	addAlert("danger", "I'm sorry, you cannot register for an account while logged in.  Please log out first.");
+	addAlert("danger", "You cannot register for an account while logged in.  Please log out first.");
 	header("Location: account.php");
 	exit();
 }
