@@ -70,7 +70,7 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
       <div id="page-wrapper">
 
       <!-- do All your html  here ARAFATH start-->
-      		GUY WORK HERE
+      		reports HERE
      <!-- do All your html here ARAFATH end-->
       </div><!-- /#page-wrapper -->
 
