@@ -373,7 +373,7 @@ class ajaxCRUD{
 
         $this->loading_image_html = "<center><br /><br  /><img src=\'" . $this->ajaxcrud_root . "css/loading.gif\'><br /><br /></center>"; //changed via setLoadingImageHTML()
 
-        $this->addText			 = "Add";
+        $this->addText			 = "";
         $this->deleteText		 = "Delete";
         $this->cancelText		 = "Cancel";
         $this->actionText		 = "Action";
@@ -1936,7 +1936,9 @@ class ajaxCRUD{
             $add_html .= "<table align='center' name='form'>\n";
 
             //for here display ALL 'addable' fields
-            foreach($this->add_fields as $field){
+
+/*          arafath
+              foreach($this->add_fields as $field){
 				$add_html .= "<tr>\n";
                 if ($field != $this->db_table_pk || $this->on_add_specify_primary_key){
                     $field_value = "";
@@ -2105,7 +2107,7 @@ class ajaxCRUD{
                         }
                     }//not a checkbox
                 }//not the primary pk
-            }//foreach
+            }*///foreach
 
             $add_html .= "</tr><tr><td>\n";
 
@@ -2113,10 +2115,11 @@ class ajaxCRUD{
 			if (!$this->ajax_add){
 				$postForm = "true";
 			}
-			$add_html .= "<input class=\"editingSize\" type=\"button\" onClick=\"validateAddForm('$this->db_table', $postForm);\" value=\"Save $item\">";
+            //arafath
+			//$add_html .= "<input class=\"editingSize\" type=\"button\" onClick=\"validateAddForm('$this->db_table', $postForm);\" value=\"Save $item\">";
 
-
-            $add_html .= "</td><td><input style='float: right;' class=\"btn editingSize\" type=\"button\" onClick=\"this.form.reset();$('#add_form_$this->db_table').slideUp('slow');\" value=\"" . $this->cancelText . "\"></td></tr>\n</table>\n";
+                //arafath
+          //  $add_html .= "</td><td><input style='float: right;' class=\"btn editingSize\" type=\"button\" onClick=\"this.form.reset();$('#add_form_$this->db_table').slideUp('slow');\" value=\"" . $this->cancelText . "\"></td></tr>\n</table>\n";
             $add_html .= "<input type=\"hidden\" name=\"action\" value=\"add\">\n";
             $add_html .= "<input type=\"hidden\" name=\"table\" value=\"$this->db_table\">\n";
 

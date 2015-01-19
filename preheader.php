@@ -11,7 +11,7 @@
 	$MYSQL_DB    = "ajaxcurd";
 	##
 	$LOCAL_JS    = FALSE; // FALSE for inclusion of remote js files
-    ##
+    ## 
     ####################################################################################
 
 	/********* THERE SHOULD BE LITTLE NEED TO EDIT BELOW THIS LINE *******/

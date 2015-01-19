@@ -69,42 +69,139 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
 
       <div id="page-wrapper">
        <!-- do All your html  here ARAFATH start-->
-<?php
-# include this file at the very top of your script
-#require_once('preheader.php');
+<div class="row">
+    <div class="col-md-6"><div class="panel panel-default">
 
-# the code for the class
-#include ('ajaxCRUD.class.php');
- 
-# this one line of code is how you implement the class
-$tblCustomer = new ajaxCRUD("Customer","tblCustomer", "pkCustomerID");
+                        <div class="panel-heading">
 
-# don't show the primary key in the table
-$tblCustomer->omitPrimaryKey();
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                        Expense Details
+                                </a>
+                            </h4>
+                        </div>
 
-# my db fields all have prefixes;
-# display headers as reasonable titles
-$tblCustomer->displayAs("fldFName", "First");
-$tblCustomer->displayAs("fldLName", "Last");
-$tblCustomer->displayAs("fldPaysBy", "Pays By");
-$tblCustomer->displayAs("fldPhone", "Phone");
-$tblCustomer->displayAs("fldZip", "Zip");
 
-# define allowable fields for my dropdown fields
-# (this can also be done for a pk/fk relationship)
-$values = array("Cash", "Credit Card", "Paypal");
-$tblCustomer->defineAllowableValues("fldPaysBy", $values);
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div class="panel-body">
 
-# add the filter box (above the table)
-$tblCustomer->addAjaxFilterBox("fldFName");
+                                    <form id ='ecpenceDetail' class='form-horizontal' role='form' name='expense' action='expensep.php' method='post'>
+                                        <div class="form-group">
 
-# add validation to certain fields (via jquery in validation.js)
-#$tblCustomer->modifyFieldWithClass("fldPhone", "phone");
-#$tblCustomer->modifyFieldWithClass("fldZip", "zip");
+                                            <label for="ID" class="col-sm-4 control-label">Expense ID</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="ID" name="expID">
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="form-group">
 
-# actually show to the table
-$tblCustomer->showTable();
-?>
+                                            <label for="inputStartDate" class="col-sm-4 control-label"> Date</label>
+
+                                            <div class="col-sm-8">
+
+                                                <input type="text" class="form-control" value="" id="dpd1" name="date1">
+
+                                            </div>
+
+                                        </div>
+										<!--Hidden field
+											<input type="hidden" name="UserID" id="" value=""> -->
+                                        <div class="form-group">
+                                            <label for="expcat" class="col-sm-4 control-label">Function</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control" id="sel1" name="function">
+                                                    <option value="iGCDP">iGCDP</option>
+                                                    <option value="iGIP">iGIP</option>
+                                                    <option value="oGCDP">oGCDP</option>
+                                                    <option value="oGIP">oGIP</option>
+													<option value="IM and COMM">IM and COMM</option>
+                                                    <option value="EB">EB</option>
+                                                    <option value="TM and RNR">TM and RNR</option>
+                                                </select>
+                                            </div>
+                                        </div>
+										<div class="form-group">
+
+                                            <label for="status" class="col-sm-4 control-label">Status </label>
+                                            <div class="col-sm-8">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="stat" value="Paid">Paid 
+                                                </label>
+                                                <label class="radio-inline">
+                                                <input type="radio" name="stat" value="Payable">Payable
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <label for="desc" class="col-sm-4 control-label">Description</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="desc" name="description">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            
+                                            <label for="amt" class="col-sm-4 control-label">Amount(LKR)</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="amt" name="amount">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </div>
+
+<div class="col-md-6">
+    <?php
+   
+     
+    # this one line of code is how you implement the class
+    $$exp = new ajaxCRUD("","exchangeperson", "expkID");
+    # don't show the primary key in the table11
+    $$exp->omitPrimaryKey();
+
+    # my db fields all have prefixes;
+    # display headers as reasonable titles
+    $$exp->displayAs("EPID", "EPID");
+    $$exp->displayAs("Name", "Name");
+    $$exp->displayAs("Country", "Country");
+    $$exp->displayAs("StartDate", "StartDate");
+    $$exp->displayAs("EndDate", "EndDate");
+    $$exp->displayAs("EP_Fee", "EP_Fee");
+    $$exp->displayAs("Proj_ID", "Project ID");
+    $$exp->displayAs("UserID", "UserID");
+    $$exp->displayAs("Status", "Status");
+    $$exp->displayAs("Function", "Function");
+
+    # define allowable fields for my dropdown fields
+    # (this can also be done for a pk/fk relationship)
+    $values = array("Raised", "Matched", "Realized");
+    $$exp->defineAllowableValues("Status", $values);
+
+    $values2 = array("iGCDP", "iGIP", "oGCDP","oGIP");
+    $$exp->defineAllowableValues("Function", $values2);
+
+    # add the filter box (above the table)
+    #$exp->addAjaxFilterBox("Name");
+    # actually show to the table
+    $$exp->turnOffAjaxADD();
+    $$exp->showTable();
+
+
+    ?>
+    <?php
+        echo $loggedInUser->user_id;
+    ?>
+</div>
+</div>
+
 
 <!-- do All your html here ARAFATH end-->
       </div><!-- /#page-wrapper -->
