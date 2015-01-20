@@ -69,7 +69,62 @@ if (!securePage($_SERVER['PHP_SELF'])){die();}
 
       <div id="page-wrapper">
        <!-- do All your html  here ARAFATH start-->
+<div class="row">
+    <div class="col-md-6">
+    <form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label">Email address</label>
+    <div class="controls">
+      <input type="email" />
+      <p class="help-block"></p>
+    </div>
+  </div>
+</form>
+    </div>
 
+<div class="col-md-6">
+    <?php
+   
+     
+    # this one line of code is how you implement the class
+    $$exp = new ajaxCRUD("","exchangeperson", "expkID");
+    # don't show the primary key in the table11
+    $$exp->omitPrimaryKey();
+
+    # my db fields all have prefixes;
+    # display headers as reasonable titles
+    $$exp->displayAs("EPID", "EPID");
+    $$exp->displayAs("Name", "Name");
+    $$exp->displayAs("Country", "Country");
+    $$exp->displayAs("StartDate", "StartDate");
+    $$exp->displayAs("EndDate", "EndDate");
+    $$exp->displayAs("EP_Fee", "EP_Fee");
+    $$exp->displayAs("Proj_ID", "Project ID");
+    $$exp->displayAs("UserID", "UserID");
+    $$exp->displayAs("Status", "Status");
+    $$exp->displayAs("Function", "Function");
+
+    # define allowable fields for my dropdown fields
+    # (this can also be done for a pk/fk relationship)
+    $values = array("Raised", "Matched", "Realized");
+    $$exp->defineAllowableValues("Status", $values);
+
+    $values2 = array("iGCDP", "iGIP", "oGCDP","oGIP");
+    $$exp->defineAllowableValues("Function", $values2);
+
+    # add the filter box (above the table)
+    #$exp->addAjaxFilterBox("Name");
+    # actually show to the table
+    $$exp->turnOffAjaxADD();
+    $$exp->showTable();
+
+
+    ?>
+    <?php
+        echo $loggedInUser->user_id;
+    ?>
+</div>
+</div>
 
 
 <!-- do All your html here ARAFATH end-->
