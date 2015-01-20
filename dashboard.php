@@ -105,6 +105,8 @@ overflow-y: auto;
       </nav>
 
       <div id="page-wrapper">
+       <!-- do All your html  here ARAFATH start-->
+
 
       <!-- do All your html  here ARAFATH start-->
       		<div class="row">
@@ -244,6 +246,11 @@ overflow-y: auto;
 
             </div>
      <!-- do All your html here ARAFATH end-->
+
+
+
+<!-- do All your html here ARAFATH end-->
+
       </div><!-- /#page-wrapper -->
 
     </div><!-- /#wrapper -->

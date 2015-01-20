@@ -73,6 +73,7 @@ require_once("class.user.php");
 require_once("class.newuser.php");
 require_once("funcs.php");
 
+
 session_start();
 
 //Global User Object Var
@@ -81,5 +82,7 @@ if(isset($_SESSION["userCakeUser"]) && is_object($_SESSION["userCakeUser"]))
 {
 	$loggedInUser = $_SESSION["userCakeUser"];
 }
+
+require_once("ajaxCRUD.class.php");
 
 ?>

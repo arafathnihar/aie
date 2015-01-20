@@ -70,4 +70,5 @@ if(is_dir("install/"))
 
 }
 
+include('preheader.php');
 ?>
