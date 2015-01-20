@@ -1,33 +1,5 @@
 <?php
-/*
-
-UserFrosting Version: 0.1
-By Alex Weissman
-Copyright (c) 2014
-
-Based on the UserCake user management system, v2.0.2.
-Copyright (c) 2009-2012
-
-UserFrosting, like UserCake, is 100% free and open-source.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the 'Software'), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-*/
+/* aiefin user mangement */
 
 require_once("models/config.php");
 if (!securePage($_SERVER['PHP_SELF'])){die();}
@@ -40,6 +12,14 @@ if(isUserLoggedIn()) {
 
 ?>
 
+<!--PHP CODE ENDS HERE-->
+
+
+
+<!--HTML CODE Starts Here-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,20 +30,20 @@ if(isUserLoggedIn()) {
     <meta name="author" content="">
     <link rel="shortcut icon" href="css/favicon.ico">
 
-    <title>Welcome to UserFrosting!</title>
+    <title>Log In</title>
 
 	<link rel="icon" type="image/x-icon" href="css/favicon.ico" />
 	
-    <!-- Bootstrap core CSS -->
+    
     <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+   
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap-switch.min.css" type="text/css" />
 	 
-    <!-- JavaScript -->
+    
     <script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/userfrosting.js"></script>
@@ -77,12 +57,12 @@ if(isUserLoggedIn()) {
       <div class="header">
         <ul class="nav nav-pills navbar pull-right">
         </ul>
-        <h3 class="text-muted">UserFrosting</h3>
+        <h3 class="text-muted">AIEFIN</h3>
       </div>
       <div class="jumbotron">
-        <h1>Welcome to UserFrosting!</h1>
-        <p class="lead">A secure, modern user management system based on UserCake, jQuery, and Bootstrap.</p>
-		<small>Please sign in here:</small>
+        <h1>Please Log In</h1>
+        <p class="lead">Please enter your user name and password</p>
+		
 		<form class='form-horizontal' role='form' name='login' action='process_login.php' method='post'>
 		  <div class="row">
 			<div id='display-alerts' class="col-lg-12">
@@ -109,10 +89,16 @@ if(isUserLoggedIn()) {
 		</form>
       </div>	
       <div class="footer">
-        <p>&copy; Your Website, 2014</p>
+        <p align="center">&copy; University of Colombo, School of Computing, 2014-2015</p>
       </div>
 
     </div> <!-- /container -->
+
+
+
+
+
+    <!--JAVASCRIPT CODE-->
 
 	<script>
         $(document).ready(function() {          
@@ -155,5 +141,13 @@ if(isUserLoggedIn()) {
 		  
 		});
 	</script>
+
+	<!--JAVASCRIPT ENDS HERE-->
+
+
   </body>
 </html>
+
+
+<!--HTML ENDS HERE-->
+

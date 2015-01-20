@@ -1,12 +1,12 @@
 
-UserFrosting Version: 0.1
+AIEFIN Version: 0.1
 By Alex Weissman
 Copyright (c) 2014
 
 Based on the UserCake user management system, v2.0.2.  http://usercake.com
 Copyright (c) 2009-2012
 
-UserFrosting, like UserCake, is 100% free and open-source.
+aiefin, like UserCake, is 100% free and open-source.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the 'Software'), to deal
@@ -28,9 +28,9 @@ THE SOFTWARE.
 
 To install, follow these instructions:
 
-    1. Create a database on your server / web hosting package. UserFrosting supports MySQLi and requires MySQL server version 4.1.3 or newer, as well as PHP 5.4 or later with PDO database connections enabled.
+    1. Create a database on your server / web hosting package. AIEFIN supports MySQLi and requires MySQL server version 4.1.3 or newer, as well as PHP 5.4 or later with PDO database connections enabled.
     2. Open up models/db-settings.php and fill out the connection details for your database.
-    3. Run the UserFrosting installer at install/install.php. UserFrosting will attempt to build the database for you.
+    3. Run the AIEFIN installer at install/install.php. AIEFIN will attempt to build the database for you.
     4. After the installer successfully completes, delete the install folder.
     5. Register your admin account, which will by default be the first account that is registered.
 
